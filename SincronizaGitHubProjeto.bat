@@ -22,7 +22,7 @@ cls
  echo.
 
 CECHO {0C}Sincronizando, aguarde...{#}{\n}
-git stash
+git pull
 
 
 @PAUSE
