@@ -1,0 +1,41 @@
+Instalação
+
+sudo apt update
+sudo apt install mysql-server
+mysql_secure_installation
+
+mysql -uroot -p[senha] 
+
+configuração
+
+GRANT ALL ON *.* TO 'root'@'%' IDENTIFIED BY '[senha]' WITH GRANT OPTION; 
+FLUSH PRIVILEGES; 
+exit;
+
+configuração do aquivo
+/etc/mysql/mysql.conf.d/mysqld.cnf 
+Mudar a linha abaixo para 
+bind-address = 127.0.0.1 > bind-address = 0.0.0.0
+comentar a linha abaixo
+#skip-external-locking
+
+Salve e feche o arquivo Reinicie o serviço mysql
+
+$ sudo service mysql restart
+Por último altere as regras o firewall. O servido utilizado para este post possui o ufw, e foram necessários os seguintes comandos:
+
+$ sudo ufw allow 3306/udp
+$ sudo ufw allow 3306/tcp
+$ sudo ufw reload
+
+Pronto nosso MySQL já está funcionando e preparado para receber conexão remota.
+
+conexão com servidor remoto
+server host: 192.168.0.100
+Port: 3306
+user: admin
+pass: rktd*77Imo
+
+
+
+
