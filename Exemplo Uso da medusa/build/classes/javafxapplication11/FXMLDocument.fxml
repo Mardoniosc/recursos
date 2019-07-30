@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication11.FXMLDocumentController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <Gauge fx:id="gaugeExample"/>
+             
+             <Gauge fx:id="gaugeExample2"/>
+             <FGauge fx:id="fgaugeExample"/>
+             
+             <Gauge fx:id="gaugeExample3" alert="true" />
+             
+             <Gauge fx:id="gaugeExample4"/>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
